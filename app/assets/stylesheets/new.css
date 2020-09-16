@@ -1,3 +1,12 @@
+.registration-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
 .indispensable {
   background: #ea352d;
   margin-left: 8px;
@@ -6,4 +15,81 @@
   color: #fff;
   font-size: 12px;
   font-weight: bold;
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+.form-header {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  font-size: 22px;
+}
+.form-header-text {
+  line-height: 100px;
+  border-bottom: 3px solid #4877fa;
+  font-weight: bold;
+  margin-top: 10%;
+}
+.form-image {
+  background-image: url(3460485_s.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+}
+.form-wrap {
+  width: 50%;
+  height: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
+  padding-bottom: 30%;
+}
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.form-group {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.button-panel {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+.button-panel .button {
+  background: #009423;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+  
+}
+
+.button:hover {
+  background: #00ff3c;
 }

@@ -1,5 +1,16 @@
 .main {
-  background: #008000;
+  width: 100%;
+  height: 85vh;
+  background-image: url(639266_m.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  // position: relative;
+  // width: 100%;
+  // min-height: 85vh;
+  // background: url(639266_m.jpg)
+  //   center / cover;
 }
 
 .btn a {
@@ -15,4 +26,26 @@
   text-decoration: none;
   background-color: #ffffff;
   color: #009cd3;
+}
+.mozi {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.mozi:hover {
+  text-shadow: 0px 0px 10px #ffffff;
+}
+.post-btn a {
+  text-decoration: none;
+}
+
+.post-btn {
+  width: 180px;
+  background: #03863a;
+  text-align: center;
+  border-radius: 5%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
 }

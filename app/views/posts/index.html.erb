@@ -1,7 +1,6 @@
 <%= render "header"%>
 <div class ="main">
-<h1>メイン画面</h1>
-  <h1>Posts#index</h1>
+  <h1>メイン画面</h1>
   <p>Find me in app/views/posts/index.html.erb</p>
   <div class="btn">
     <a href="#">テーブル</a>
@@ -9,12 +8,14 @@
     <a href="#">チェア</a>
     <a href="#">テント</a>
   </div>
-  <div>
-    
+
    <%# 投稿する %>
+   <div class='post-btn'>
     <a href="/posts/new">
-      <%= image_tag 'toukou.jpg', size: '140x50'%>
+      <span class="mozi">投稿する！</span>
+      <%#= image_tag 'toukou.jpg', size: '140x50'%>
+   </div>
    <%# 投稿する %>
     </a>
-  </div>
+    
 </div>
