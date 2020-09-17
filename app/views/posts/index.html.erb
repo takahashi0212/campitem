@@ -3,12 +3,18 @@
   <h1>メイン画面</h1>
   <p>Find me in app/views/posts/index.html.erb</p>
   <div class="btn">
-    <a href="#">テーブル</a>
-    <a href="#">グリル</a>
-    <a href="#">チェア</a>
-    <a href="#">テント</a>
+    <a href="/posts/table">テーブル</a>
+    <a href="/posts/grill">グリル</a>
+    <a href="/posts/chair">チェア</a>
+    <a href="posts/tent">テント</a>
   </div>
 
+  <% @posts.each do |post| %>
+    <%= link_to posts_path(post.id), method: :get do %>
+      <%= image_tag post.image.variant(resize:'300x300') if post.image.attached? %>
+    <% end %>
+  
+  <% end %>
    <%# 投稿する %>
    <div class='post-btn'>
     <a href="/posts/new">
