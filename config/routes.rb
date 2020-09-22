@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get "posts/table" => "posts#table"
   get "posts/grill" => "posts#grill"
   get "posts/tent"  => "posts#tent"
+  get "posts/table/show" => "posts#show"
 end
