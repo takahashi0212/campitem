@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  # before_action :post_params, only: [:show]
   def index
     @posts = Post.all.order("created_at DESC")
   end
@@ -16,15 +17,22 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+     #@post = Post.find_by(params[:id]
+     #@post = Post.find_by(category_id: 2)
+     #@post = Post.find_by(params[:id])
+  end
+
+  def table
+    @posts = Post.all.order("created_at DESC")
+    @posts = Post.where(category_id: 2)
+  end
+
   def chair
     @posts = Post.all.order("created_at DESC")
     @posts = Post.where(category_id: 4)
   end
    
-  def table
-    @posts = Post.all.order("created_at DESC")
-    @posts = Post.where(category_id: 2)
-  end
 
   def grill
     @posts = Post.all.order("created_at DESC")
@@ -38,6 +46,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:image, :name, :description, :category_id, :price).merge(user_id: current_user.id)
+    params.require(:post).permit(:image, :name, :description, :category_id, :price)
   end
 end

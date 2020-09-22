@@ -10,17 +10,18 @@
   </div>
 
   <% @posts.each do |post| %>
-    <%= link_to posts_path(post.id), method: :get do %>
-      <%= image_tag post.image.variant(resize:'300x300') if post.image.attached? %>
-    <% end %>
+    <%# <%= link_to posts_path(post.id), method: :get do %>
+      <%#= image_tag post.image.variant(resize:'300x300') if post.image.attached? %>
+    <%# end %> 
   
   <% end %>
    <%# 投稿する %>
    <div class='post-btn'>
     <a href="/posts/new">
-      <span class="mozi">投稿する！</span>
-      <%#= image_tag 'toukou.jpg', size: '140x50'%>
+    <span class="btn btn-primary">投稿する！</span>
+      
    </div>
+   <%#span class="mozi" >投稿する！</span>
    <%# 投稿する %>
     </a>
     
