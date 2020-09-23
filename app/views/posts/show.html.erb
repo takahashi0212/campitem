@@ -1,5 +1,4 @@
   <h1>詳細ページ</h1>
-      <%#= link_to posts_show_path(post.id), method: :get do %>
       <% if @post.image.attached? %>
         <%= image_tag @post.image.variant(resize:'300x300')  %>
       <% end %>

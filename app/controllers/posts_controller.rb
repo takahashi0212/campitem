@@ -1,8 +1,9 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+  before_action :sort_desc, only: [:index, :table, :chair, :grill, :tent]
   def index
-    @posts = Post.all.order("created_at DESC")
   end
+
   def new
     @post = Post.new
   end
@@ -17,30 +18,27 @@ class PostsController < ApplicationController
   end
 
   def show
-     #@post = Post.find_by(params[:id]
-     #@post = Post.find_by(category_id: 2)
      @post = Post.find(params[:id])
   end
 
   def table
-    @posts = Post.all.order("created_at DESC")
     @posts = Post.where(category_id: 2)
   end
 
   def chair
-    @posts = Post.all.order("created_at DESC")
     @posts = Post.where(category_id: 4)
   end
-   
-
+  
   def grill
-    @posts = Post.all.order("created_at DESC")
     @posts = Post.where(category_id: 3)
   end
 
   def tent
-    @posts = Post.all.order("created_at DESC")
     @posts = Post.where(category_id: 5)
+  end
+  
+  def sort_desc
+    @posts = Post.all.order("created_at DESC")
   end
 
   private
