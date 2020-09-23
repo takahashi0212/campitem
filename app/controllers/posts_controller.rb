@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  # before_action :post_params, only: [:show]
   def index
     @posts = Post.all.order("created_at DESC")
   end
@@ -20,7 +19,7 @@ class PostsController < ApplicationController
   def show
      #@post = Post.find_by(params[:id]
      #@post = Post.find_by(category_id: 2)
-     #@post = Post.find_by(params[:id])
+     @post = Post.find(params[:id])
   end
 
   def table
