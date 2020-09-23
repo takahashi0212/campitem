@@ -1,24 +1,9 @@
-      <%# <h1>詳細ページ</h1> %>
-      <%# <h2> %>
-      <%# <% if @post.image.attached? %>
-      <%# <%= image_tag @post.image %>
-      <%# <% end %>
-      <%# </h2> %>
-<%#  %>
-      <%# <span><%= @post.price円</span> %>
-  
-   <%# @posts.each do |post| %>
-      <%#= link_to posts_show_path(post.id), method: :get do %>
-        <%#= image_tag post.image.variant(resize:'300x300') if post.image.attached? %>
-      <%# end %>
-  <%# end %>
-
   <h1>詳細ページ</h1>
       <%#= link_to posts_show_path(post.id), method: :get do %>
       <% if @post.image.attached? %>
         <%= image_tag @post.image.variant(resize:'300x300')  %>
       <% end %>
-    
-
+      <%= @post.name %>
+      <%= @post.description %>
       <span><%= @post.price %>円</span>
   
