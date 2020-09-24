@@ -16,6 +16,7 @@
 ## Association
 has_many :posts
 has_many :messages
+has_many :like
 
 ## posts テーブル
 
@@ -31,8 +32,9 @@ has_many :messages
 ## Association
 has_one :messages
 bilongs_to :user
+has_many :like
 
-## messages　テーブル
+## messages テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
@@ -43,3 +45,14 @@ bilongs_to :user
 ## Association
 belongs_to :post
 belongs_to :user
+
+## like テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| post   | references | null: false, foreign_key: true |
+
+## Association
+belongs_to :user
+belongs_to :post
